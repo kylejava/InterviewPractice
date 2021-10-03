@@ -5,12 +5,11 @@ def binary(target, nums):
 
     while(low <= high):
         mid = (low+high) //2
-        print("low" + str(low))
-        print("high" + str(high))
+
         if(nums[mid] > target):
-            low = low -1
+            mid = low-1
         elif(nums[mid] < target):
-            high = high + 1
+            mid = high+1
         else:
             return mid
 
